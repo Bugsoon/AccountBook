@@ -78,4 +78,4 @@ app/src/main/java/com/example/accountbook/
 
 ## 许可证
 
-MIT
+[MIT](LICENSE)
