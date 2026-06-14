@@ -1,0 +1,73 @@
+package com.example.accountbook.utils
+
+import com.example.accountbook.R
+
+object CategoryIconHelper {
+    private val iconMap = mapOf(
+        "餐饮" to R.drawable.ic_cat_food,
+        "购物" to R.drawable.ic_cat_shopping,
+        "日用" to R.drawable.ic_cat_daily,
+        "交通" to R.drawable.ic_cat_transport,
+        "水果" to R.drawable.ic_cat_fruit,
+        "零食" to R.drawable.ic_cat_snacks,
+        "运动" to R.drawable.ic_cat_sports,
+        "娱乐" to R.drawable.ic_cat_entertainment,
+        "通讯" to R.drawable.ic_cat_communication,
+        "服饰" to R.drawable.ic_cat_clothing,
+        "社交" to R.drawable.ic_cat_social,
+        "医疗" to R.drawable.ic_cat_medical,
+        "书籍" to R.drawable.ic_cat_books,
+        "快递" to R.drawable.ic_cat_delivery,
+        "网费" to R.drawable.ic_cat_internet,
+        "游戏" to R.drawable.ic_cat_game,
+        "学习" to R.drawable.ic_cat_study,
+        "工资" to R.drawable.ic_cat_salary,
+        "奖金" to R.drawable.ic_cat_bonus,
+        "投资" to R.drawable.ic_cat_investment,
+        "兼职" to R.drawable.ic_cat_parttime,
+        "居住" to R.drawable.ic_cat_daily,
+        "其他" to R.drawable.ic_cat_other,
+        "其他支出" to R.drawable.ic_cat_other,
+        "其他收入" to R.drawable.ic_cat_other,
+        "ic_cat_food" to R.drawable.ic_cat_food,
+        "ic_cat_shopping" to R.drawable.ic_cat_shopping,
+        "ic_cat_daily" to R.drawable.ic_cat_daily,
+        "ic_cat_transport" to R.drawable.ic_cat_transport,
+        "ic_cat_fruit" to R.drawable.ic_cat_fruit,
+        "ic_cat_snacks" to R.drawable.ic_cat_snacks,
+        "ic_cat_sports" to R.drawable.ic_cat_sports,
+        "ic_cat_entertainment" to R.drawable.ic_cat_entertainment,
+        "ic_cat_communication" to R.drawable.ic_cat_communication,
+        "ic_cat_clothing" to R.drawable.ic_cat_clothing,
+        "ic_cat_social" to R.drawable.ic_cat_social,
+        "ic_cat_medical" to R.drawable.ic_cat_medical,
+        "ic_cat_books" to R.drawable.ic_cat_books,
+        "ic_cat_delivery" to R.drawable.ic_cat_delivery,
+        "ic_cat_internet" to R.drawable.ic_cat_internet,
+        "ic_cat_game" to R.drawable.ic_cat_game,
+        "ic_cat_study" to R.drawable.ic_cat_study,
+        "ic_cat_salary" to R.drawable.ic_cat_salary,
+        "ic_cat_bonus" to R.drawable.ic_cat_bonus,
+        "ic_cat_investment" to R.drawable.ic_cat_investment,
+        "ic_cat_parttime" to R.drawable.ic_cat_parttime,
+        "ic_cat_other" to R.drawable.ic_cat_other,
+        "ic_food" to R.drawable.ic_cat_food,
+        "ic_transport" to R.drawable.ic_cat_transport,
+        "ic_shopping" to R.drawable.ic_cat_shopping,
+        "ic_entertainment" to R.drawable.ic_cat_entertainment,
+        "ic_housing" to R.drawable.ic_cat_daily,
+        "ic_medical" to R.drawable.ic_cat_medical,
+        "ic_education" to R.drawable.ic_cat_study,
+        "ic_communication" to R.drawable.ic_cat_communication,
+        "ic_other" to R.drawable.ic_cat_other,
+        "ic_salary" to R.drawable.ic_cat_salary,
+        "ic_bonus" to R.drawable.ic_cat_bonus,
+        "ic_investment" to R.drawable.ic_cat_investment,
+        "ic_parttime" to R.drawable.ic_cat_parttime,
+        "ic_other_income" to R.drawable.ic_cat_other
+    )
+
+    fun getIconRes(iconOrName: String): Int {
+        return iconMap[iconOrName] ?: R.drawable.ic_cat_other
+    }
+}

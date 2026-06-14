@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/yellow_primary"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tab_expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支出"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/bg_tab_selected" />
+
+            <TextView
+                android:id="@+id/tab_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收入"
+                android:textSize="17sp"
+                android:textColor="#CCFFFFFF"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="8dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_categories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <LinearLayout
+        android:id="@+id/ll_keyboard_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:id="@+id/iv_selected_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="4dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_selected_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/tv_amount_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="28sp"
+                android:textColor="#333333"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="备注：点击填写备注"
+            android:textSize="14sp"
+            android:textColor="#CCCCCC"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input_rounded"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+            <TextView android:id="@+id/btn_7" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="7" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_8" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="8" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_9" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="9" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_today" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="📅今天" android:textSize="13sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+            <TextView android:id="@+id/btn_4" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="4" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_5" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="5" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_6" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="6" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_plus" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="+" android:textSize="22sp" android:textColor="@color/yellow_primary" android:textStyle="bold" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+            <TextView android:id="@+id/btn_1" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="1" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_2" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="2" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_3" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="3" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_minus" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="-" android:textSize="22sp" android:textColor="@color/yellow_primary" android:textStyle="bold" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="4dp">
+            <TextView android:id="@+id/btn_dot" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="." android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_0" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="0" android:textSize="20sp" android:textColor="#333333" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_delete" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="⌫" android:textSize="18sp" android:textColor="#666666" android:background="@drawable/bg_key_rounded" android:layout_margin="3dp" />
+            <TextView android:id="@+id/btn_confirm" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:gravity="center" android:text="完成" android:textSize="16sp" android:textStyle="bold" android:textColor="@android:color/white" android:background="@drawable/bg_key_confirm_rounded" android:layout_margin="3dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

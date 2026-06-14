@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.AccountBook" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/yellow_primary</item>
+        <item name="colorPrimaryVariant">@color/yellow_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/yellow_accent</item>
+        <item name="colorSecondaryVariant">@color/yellow_primary_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/yellow_primary_dark</item>
+    </style>
+
+    <style name="FabShape" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="BottomNavTextActive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/yellow_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BottomNavTextInactive" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+</resources>
