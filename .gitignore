@@ -9,3 +9,21 @@
 .cxx
 /app/build
 AGENTS.md
+
+# APK files
+*.apk
+*.ap_
+*.aab
+
+# Signing keys
+*.jks
+*.keystore
+
+# Debug files
+*.hprof
+*.log
+*.tmp
+
+# OS files
+Thumbs.db
+desktop.ini
