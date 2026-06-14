@@ -1,57 +1,79 @@
-# 记账本 (AccountBook)
+# AccountBook
 
-一款简洁的 Android 个人记账应用，帮助你轻松管理日常收支。
+A lightweight Android personal finance management application built with Kotlin and Room database.
 
-A simple Android personal finance app that helps you track daily income and expenses with ease.
+## Overview
 
-## 功能特性 / Features
+AccountBook is designed to help users track daily income and expenses with a clean, intuitive interface. It supports custom categories, budget management, statistical analysis, and auto-recording templates.
 
-- 📝 记录收入和支出 / Record income and expenses
-- 📊 统计图表 / Statistical charts (饼图、折线图 / Pie chart, line chart)
-- 💰 预算管理 / Budget management
-- 🏷️ 自定义分类 / Custom categories with icons
-- 🔄 自动记账模板 / Auto record templates
-- 📅 日期筛选 / Date filtering
-- 🎨 Material Design 界面 / Material Design UI
+## Features
 
-## 截图 / Screenshots
+- **Record Management**: Quickly add income and expense records with amount, category, date, and notes
+- **Category System**: 14 built-in categories (9 expense, 5 income) with custom icons; supports user-defined categories
+- **Statistical Charts**: Pie chart for category distribution, line chart for monthly trends
+- **Budget Control**: Set monthly budgets per category with progress tracking
+- **Auto Record Templates**: Create reusable templates for recurring transactions
+- **Date Filtering**: Filter records by date range
+- **Material Design UI**: Bottom navigation, FAB for quick add, custom date picker
 
-<!-- 在此处添加应用截图 / Add app screenshots here -->
+## Tech Stack
 
-## 技术栈 / Tech Stack
+| Component | Technology |
+|-----------|------------|
+| Language | Kotlin 1.9.22 |
+| Min SDK | 26 (Android 8.0) |
+| Target SDK | 34 |
+| Architecture | MVVM |
+| Database | Room 2.6.1 |
+| UI Components | Material Design 1.11.0, MPAndroidChart 3.1.0 |
+| Async | Coroutines, LiveData |
+| Build Tool | Gradle 8.13, AGP 8.13.2 |
 
-- **语言**: Kotlin
-- **架构**: MVVM
-- **数据库**: Room
-- **UI**: Material Design + 自定义图表
-- **最低版本**: Android 8.0 (API 26)
-
-- **Language**: Kotlin
-- **Architecture**: MVVM
-- **Database**: Room
-- **UI**: Material Design + Custom Charts
-- **Min SDK**: Android 8.0 (API 26)
-
-## 构建 / Build
-
-```bash
-# 克隆项目 / Clone the project
-git clone https://github.com/your-username/AccountBook.git
-
-# 构建调试版本 / Build debug APK
-./gradlew assembleDebug
-```
-
-## 项目结构 / Project Structure
+## Project Structure
 
 ```
 app/src/main/java/com/example/accountbook/
-├── data/           # 数据层 / Data layer (Entity, DAO, Repository)
-├── ui/             # 界面层 / UI layer (Activity, Fragment, Adapter, View)
-├── utils/          # 工具类 / Utilities
-└── MainActivity.kt # 主入口 / Main entry point
+├── data/
+│   ├── entity/          # Room entities: Record, Category, Budget, AutoRecordTemplate
+│   ├── dao/             # Data access objects
+│   ├── repository/      # Repository layer
+│   └── AppDatabase.kt   # Room database singleton
+├── ui/
+│   ├── activity/        # AddRecord, ManageCategories, AutoRecord, AmountInput
+│   ├── fragment/        # Home, Statistics, Budget, Settings
+│   ├── adapter/         # RecyclerView adapters
+│   ├── view/            # PieChartView, LineChartView, WheelDatePickerDialog, DraggableView
+│   └── viewmodel/       # ViewModels for each feature
+└── utils/
+    └── CategoryIconHelper.kt
 ```
 
-## 许可证 / License
+## Build
+
+```bash
+# Debug build
+./gradlew assembleDebug
+
+# Release build
+./gradlew assembleRelease
+
+# Clean build
+./gradlew clean assembleDebug
+```
+
+## Database
+
+- Database name: `account_book_database`
+- Version: 1
+- Auto-seeds 14 default categories on first launch
+- Schema export is disabled
+
+## Notes
+
+- Chinese UI strings are hardcoded in entities, not in `strings.xml`
+- Uses Aliyun Maven mirrors with fallback to Google/Maven Central
+- Room uses kapt annotation processor
+
+## License
 
 MIT
