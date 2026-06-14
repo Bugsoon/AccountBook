@@ -1,6 +1,6 @@
 # 记账本 (AccountBook)
 
-一款轻量级 Android 个人财务管理应用，基于 Kotlin 和 Room 数据库开发。
+[English](README.md)
 
 > 本项目完全由 AI（MiMo Code Agent）开发。
 

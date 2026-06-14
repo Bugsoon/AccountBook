@@ -1,6 +1,6 @@
 # AccountBook
 
-A lightweight Android personal finance management application built with Kotlin and Room database.
+[中文](README_zh.md)
 
 > This project was entirely developed by AI (MiMo Code Agent).
 
