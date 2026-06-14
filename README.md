@@ -4,6 +4,16 @@
 
 > This project was entirely developed by AI (MiMo Code Agent).
 
+## Screenshots
+
+| 明细 | 添加记录 |
+|------|----------|
+| ![明细](screenshots/明细.jpg) | ![添加](screenshots/添加.jpg) |
+
+| 类型 | 图表 |
+|------|------|
+| ![类型](screenshots/类型.jpg) | ![图表](screenshots/图表.jpg) |
+
 ## Overview
 
 AccountBook is designed to help users track daily income and expenses with a clean, intuitive interface. It supports custom categories, budget management, statistical analysis, and auto-recording templates.
