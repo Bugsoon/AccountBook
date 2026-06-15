@@ -17,4 +17,19 @@
             android:hint="@string/category_name"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="选择图标"
+        android:textSize="14sp"
+        android:textColor="#666666" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="never" />
 </LinearLayout>

@@ -32,6 +32,7 @@ class AutoRecordActivity : AppCompatActivity() {
 
     private var selectedType = "expense"
     private var categories: List<Category> = emptyList()
+    private var filteredCategories: List<Category> = emptyList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -133,16 +134,13 @@ class AutoRecordActivity : AppCompatActivity() {
                     return@setPositiveButton
                 }
 
-                val selectedCategory = if (spinnerCategory.selectedItem is Category) {
-                    spinnerCategory.selectedItem as Category
-                } else {
-                    null
-                }
-
-                if (selectedCategory == null) {
+                val position = spinnerCategory.selectedItemPosition
+                if (position < 0 || position >= filteredCategories.size) {
                     Toast.makeText(this, "请选择分类", Toast.LENGTH_SHORT).show()
                     return@setPositiveButton
                 }
+
+                val selectedCategory = filteredCategories[position]
 
                 val frequency = frequencyValues[spinnerFrequency.selectedItemPosition]
                 val nextTriggerDate = calculateNextTriggerDate(frequency)
@@ -166,7 +164,7 @@ class AutoRecordActivity : AppCompatActivity() {
     }
 
     private fun updateCategorySpinner(spinner: Spinner) {
-        val filteredCategories = categories.filter { it.type == selectedType }
+        filteredCategories = categories.filter { it.type == selectedType }
         val categoryNames = filteredCategories.map { it.name }.toTypedArray()
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categoryNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
