@@ -18,6 +18,7 @@ AGENTS.md
 # Signing keys
 *.jks
 *.keystore
+keystore.properties
 
 # Debug files
 *.hprof
